@@ -54,19 +54,19 @@
   }
 
   .cta-tablet-bg {
-    @apply relative before:content-[''] before:bg-[url('assets/bg-simplify-section-mobile.svg')] sm:before:bg-[url('assets/bg-simplify-section-desktop.svg')] before:bg-contain sm:before:bg-cover sm:before:bg-center before:bg-no-repeat before:absolute before:inset-0
+    @apply relative before:content-[''] before:bg-[url('bg-simplify-section-mobile.svg')] sm:before:bg-[url('bg-simplify-section-desktop.svg')] before:bg-contain sm:before:bg-cover sm:before:bg-center before:bg-no-repeat before:absolute before:inset-0
   }
 
   .top-right-tablet {
-    @apply relative before:content-[''] before:bg-[url('assets/bg-tablet-pattern.svg')] before:bg-no-repeat before:absolute before:inset-[-100%_-100%_45px_25px] before:z-[-50] before:bg-size-[70%_auto] before:bg-left-bottom
+    @apply relative before:content-[''] before:bg-[url('bg-tablet-pattern.svg')] before:bg-no-repeat before:absolute before:inset-[-100%_-100%_45px_25px] before:z-[-50] before:bg-size-[70%_auto] before:bg-left-bottom
   }
 
   .bottom-left-tablet {
-    @apply relative after:content-[''] after:bg-[url('assets/bg-tablet-pattern.svg')] after:bg-no-repeat after:absolute after:inset-[50%_70%_-100%_-170%] after:z-[-50] after:bg-size-[70%_auto] after:bg-right-top after:hidden sm:after:block
+    @apply relative after:content-[''] after:bg-[url('bg-tablet-pattern.svg')] after:bg-no-repeat after:absolute after:inset-[50%_70%_-100%_-170%] after:z-[-50] after:bg-size-[70%_auto] after:bg-right-top after:hidden sm:after:block
   }
 
   .bottom-right-tablet {
-    @apply relative before:content-[''] before:bg-[url('assets/bg-tablet-pattern.svg')] before:bg-no-repeat before:absolute before:inset-[-100vw_-100%_100%_60%] before:z-[-50] before:bg-size-[70%_auto] before:bg-left-bottom sm:before:hidden
+    @apply relative before:content-[''] before:bg-[url('bg-tablet-pattern.svg')] before:bg-no-repeat before:absolute before:inset-[-100vw_-100%_100%_60%] before:z-[-50] before:bg-size-[70%_auto] before:bg-left-bottom sm:before:hidden
   }
 }
 
