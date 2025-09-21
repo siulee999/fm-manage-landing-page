@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-accent-4: hsl(12, 88%, 59%);
+  --color-accent-1: hsl(13, 100%, 96%);
+  --color-primary-9: hsl(228, 39%, 23%);
+  --color-n-9: hsl(233, 12%, 13%);
+  --color-n-5: hsl(0, 0%, 69%);
+  --color-n-1: hsl(0, 0%, 98%);
+  --color-logo: #242D52;
+
+  --font-fam: 'Be Vietnam Pro', sans-serif;
+
+  --spacing-section-wide: 4rem;
+  --spacing-section-narrow: 2rem;  
+  --spacing-page-padding: 1rem;
+
+  --content-width: 1200px;
+}
+
+
+@layer base {
+  html, body {
+    @apply font-fam text-n-5 overflow-x-hidden
+  }
+
+  a, button {
+    @apply hover:cursor-pointer
+  }
+}
+
+
+@layer components {
+  .primary-btn {
+    @apply bg-accent-4 rounded-3xl px-6 py-2 shadow-lg hover:bg-accent-4/70 hover:cursor-pointer text-xs text-n-1 font-medium shrink-0
+  }
+
+  .p-switched-btn {
+    @apply bg-n-1 rounded-3xl px-6 py-2 shadow-lg hover:text-accent-4/70 hover:cursor-pointer text-xs text-accent-4 font-medium shrink-0
+  }
+
+  .swiper-pagination {
+    @apply block sm:hidden
+  }
+
+  .swiper-pagination-bullet {
+    @apply border-2 border-accent-4 !opacity-100
+  }
+  
+  .feature-title-bg {
+    @apply relative before:content-[''] before:bg-accent-1 before:absolute before:inset-[0_-100vw_0_0] before:z-[-1] before:rounded-3xl sm:before:hidden 
+  }
+
+  .cta-tablet-bg {
+    @apply relative before:content-[''] before:bg-[url('assets/bg-simplify-section-mobile.svg')] sm:before:bg-[url('assets/bg-simplify-section-desktop.svg')] before:bg-contain sm:before:bg-cover sm:before:bg-center before:bg-no-repeat before:absolute before:inset-0
+  }
+
+  .top-right-tablet {
+    @apply relative before:content-[''] before:bg-[url('assets/bg-tablet-pattern.svg')] before:bg-no-repeat before:absolute before:inset-[-100%_-100%_45px_25px] before:z-[-50] before:bg-size-[70%_auto] before:bg-left-bottom
+  }
+
+  .bottom-left-tablet {
+    @apply relative after:content-[''] after:bg-[url('assets/bg-tablet-pattern.svg')] after:bg-no-repeat after:absolute after:inset-[50%_70%_-100%_-170%] after:z-[-50] after:bg-size-[70%_auto] after:bg-right-top after:hidden sm:after:block
+  }
+
+  .bottom-right-tablet {
+    @apply relative before:content-[''] before:bg-[url('assets/bg-tablet-pattern.svg')] before:bg-no-repeat before:absolute before:inset-[-100vw_-100%_100%_60%] before:z-[-50] before:bg-size-[70%_auto] before:bg-left-bottom sm:before:hidden
+  }
+}
+
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center
+  }
+
+  .limit-container {
+    @apply w-[min(var(--content-width),100%-var(--spacing-page-padding)*2)] mx-auto
+  }
+
+  .even-grid {
+    @apply grid sm:grid-cols-2 sm:grid-rows-1 auto-rows-auto gap-section-narrow
+  }
+}
